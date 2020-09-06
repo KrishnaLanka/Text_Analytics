@@ -24,15 +24,14 @@ library(rworldxtra)
 
 page = read_html("https://en.wikipedia.org/wiki/Elon_Musk")
 
-# Scraping OpenAI Wikipedia Page.
+# Scraping data from ElonMusk Wikipedia Page.
 
 text = html_text(html_nodes(page,'p'))
 text = text[text != ""]
 text = gsub("\\[[0-9]]|\\[[0-9][0-9]]|\\[[0-9][0-9][0-9]]","",text) # removing references [101] type
 
-## Make one complete document
+## Make one complete document from the Wikipedia page.
 text = paste(text,collapse = " ") 
-
 text = as.String(text)
 
 #Using OpenNLP, finding all locations and Persons mentioned in Elon Musk Wikipedia Page. Setting timers.
