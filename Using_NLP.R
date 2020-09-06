@@ -51,8 +51,8 @@ k <- sapply(annot.l1$features, `[[`, "kind")
 EM_locations = text[annot.l1[k == "location"]]
 EM_persons = text[annot.l1[k == "person"]]
 
-locations = unique(EM_locations) # view contents of this obj
-persons = unique(EM_persons)
+locations = unique(EM_locations) # view contents of this locations object
+persons = unique(EM_persons) # view contents of this persons object
 
 print(locations)
 
